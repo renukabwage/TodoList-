@@ -20,6 +20,7 @@ function addTaskToDom(task) {
     // Example: parentElement.appendChild(li);
   }
 
+//add task list to the dom
 function renderList () {
 
     taskList.innerHTML = '';
@@ -32,6 +33,7 @@ function renderList () {
 
 }
 
+//check box functionality
 function markTaskAsComplete (taskId) {
       const task = tasks.filter(function(task){
             return task.id == taskId;
@@ -44,7 +46,7 @@ function markTaskAsComplete (taskId) {
            renderList ();
         }
 }
-
+//delete task
 function deleteTask (taskId) {
   console.log(taskId);
         const newtask = tasks.filter(function(task){
@@ -55,6 +57,7 @@ function deleteTask (taskId) {
     renderList ();
 }
 
+//add task
 function addTask (task) {
     if(task){
         tasks.push(task);
@@ -64,7 +67,7 @@ function addTask (task) {
 
 }
 
-
+//handle the task press event
 function handlePressEvent(e){
    if(e.key == 'Enter') {
      const text = e.target.value;
