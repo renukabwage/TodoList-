@@ -58,27 +58,17 @@ function deleteTask (taskId) {
 function addTask (task) {
     if(task){
         tasks.push(task);
-        showNotification("task added successfully");
         renderList ();
     }
-
-    showNotification("task can not added");
  
 
 }
 
-function showNotification(text) {
-    alert(text);
-}
 
 function handlePressEvent(e){
    if(e.key == 'Enter') {
      const text = e.target.value;
      console.log('text' , text);
-
-     if(!text){
-        showNotification("enter the list");
-     }
 
      const task ={
         text,
