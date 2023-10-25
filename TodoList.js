@@ -67,7 +67,9 @@ function addTask (task) {
 
 }
 
-function showNotification(text) {}
+function showNotification(text) {
+    alert(text);
+}
 
 function handlePressEvent(e){
    if(e.key == 'Enter') {
